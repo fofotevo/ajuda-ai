@@ -1,18 +1,12 @@
 const express = require('express');
-const routes = express.Router();
+const router = express.Router();
 
 const UserController = require('./controllers/UserController.js')
 
-
-// Controllers 
-
-// Routes 
-
-routes.get('/', (req, res) => {
-    res.end('Hello Word');
+router.get('/', (req, res) => {
+    res.render('index')
 });
 
-routes.post('/user',UserController.create)
+router.post('/user', UserController.create);
 
-
-module.exports = routes;
+module.exports = router;
