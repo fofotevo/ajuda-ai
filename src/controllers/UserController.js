@@ -9,21 +9,21 @@ module.exports = {
 
     async create(req, res) {
 
-        var { name, address, phone, members_family, income, need, city, active } = req.body;
-    
-        const user = await User.create( 
+        var { name, address, phone, family_size, income, need, city, cpf } = req.body;
+        console.log(name)
+        await User.create( 
         {   
             name, 
             address, 
             phone,
-            members_family,
+            family_size,
             income,
             need,
             city,
-            active
+            cpf
         });
 
-        return res.json(user);
+        return res.rend('/');
     
     }
  
