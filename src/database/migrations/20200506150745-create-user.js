@@ -25,10 +25,7 @@ module.exports = {
           phone:{
             type: Sequelize.STRING,
           },
-          active:{
-            type: Sequelize.BOOLEAN,
-            
-          },
+          
 
           need:{
             type: Sequelize.STRING,
@@ -36,7 +33,7 @@ module.exports = {
           },
 
           membres_family:{
-            type: Sequelize.DECIMAL,
+            type: Sequelize.INTEGER,
             allowNull:false,
           },
           impact:{

@@ -10,7 +10,7 @@ module.exports = {
 
     async create(req,res) {
 
-        var {name, address,phone,members_family,impact, income,need,active } = req.body;
+        var {name, address,phone,members_family,impact, income,need,city,active } = req.body;
         
         
 
@@ -24,6 +24,7 @@ module.exports = {
             impact, 
             income,
             need,
+            city,
             active
         });
 
