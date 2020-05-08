@@ -1,7 +1,7 @@
 {
-  "name": "izi-compras",
+  "name": "ifsul-hacathon",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "license": "",
   "scripts": {
     "start": "node src/server.js",
