@@ -1,20 +1,16 @@
 const User = require('../models/user');
 
-
 module.exports = {
 
-    async index(req,res) {
+    async index(req, res) {
         const users = await User.findAll();
         return res.json(users);
     },
 
-    async create(req,res) {
+    async create(req, res) {
 
-        var {name, address,phone,members_family,impact, income,need,city,active } = req.body;
-        
-        
-
-
+        var { name, address, phone, members_family, impact, income, need, city, active } = req.body;
+    
         const user = await User.create( 
         {   
             name, 
@@ -30,8 +26,6 @@ module.exports = {
 
         return res.json(user);
     
-    },
-
-
-   
+    }
+ 
 }
