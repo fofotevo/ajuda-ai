@@ -11,6 +11,7 @@ class User extends Model {
             income: DataTypes.STRING,
             need: DataTypes.STRING,
             active: DataTypes.BOOLEAN,
+            city: DataTypes.STRING
 
         }, {
             sequelize
