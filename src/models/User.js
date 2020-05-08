@@ -10,15 +10,11 @@ class User extends Model {
             impact: DataTypes.STRING,
             income: DataTypes.STRING,
             need: DataTypes.STRING,
-            Active: DataTypes.BOOLEAN,
+            active: DataTypes.BOOLEAN,
 
         }, {
             sequelize
         })
-    }
-    static associate(models){
-        this.hasMany(models.Product,{foreignKey :'user_id', as : 'products'});
-        
     }
 
 }
