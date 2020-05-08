@@ -20,11 +20,12 @@ module.exports = {
 
           address:{
             type: Sequelize.STRING,
-            allowNull:false,
+            allowNull: false,
           },
 
           phone:{
             type: Sequelize.STRING,
+            allowNull: false,
           },
 
           need:{
@@ -32,9 +33,14 @@ module.exports = {
             allowNull:false,
           },
 
-          membres_family:{
+          family_size:{
             type: Sequelize.INTEGER,
             allowNull:false,
+          },
+
+          cpf:{
+            type: Sequelize.STRING,
+            allowNull: false,
           },
 
           city:{

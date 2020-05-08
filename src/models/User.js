@@ -6,9 +6,10 @@ class User extends Model {
             name: DataTypes.STRING,
             address: DataTypes.STRING,
             phone: DataTypes.STRING,
-            membres_family: DataTypes.INTEGER,
+            family_size: DataTypes.INTEGER,
             income: DataTypes.STRING,
-            need: DataTypes.STRING, 
+            need: DataTypes.STRING,
+            cpf: DataTypes.STRING, 
             city: DataTypes.STRING
         }, 
         {
