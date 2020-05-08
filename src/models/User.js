@@ -7,15 +7,13 @@ class User extends Model {
             address: DataTypes.STRING,
             phone: DataTypes.STRING,
             membres_family: DataTypes.INTEGER,
-            impact: DataTypes.STRING,
             income: DataTypes.STRING,
-            need: DataTypes.STRING,
-            
+            need: DataTypes.STRING, 
             city: DataTypes.STRING
-
-        }, {
+        }, 
+        {
             sequelize
-        })
+        });
     }
 }
 

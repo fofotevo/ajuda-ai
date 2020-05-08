@@ -22,10 +22,10 @@ module.exports = {
             type: Sequelize.STRING,
             allowNull:false,
           },
+
           phone:{
             type: Sequelize.STRING,
           },
-          
 
           need:{
             type: Sequelize.STRING,
@@ -36,16 +36,12 @@ module.exports = {
             type: Sequelize.INTEGER,
             allowNull:false,
           },
-          impact:{
-            type: Sequelize.STRING,
-            allowNull: false,
-          },
+
           city:{
             type: Sequelize.STRING,
             allowNull: false,
           },
           
-
           income:{
             type: Sequelize.STRING,
             allowNull: false,
