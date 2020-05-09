@@ -9,6 +9,18 @@ router.get('/', (req, res) => {
     res.render('index')
 });
 
+router.get('/ajudar', (req, res) => {
+    res.render('casos');
+});
+
+router.post('/ajudar/:id', (req, res) => {
+    res.render('doar');
+});
+
+router.get('/contato', (req, res) => {
+    res.render('contato');
+});
+
 router.post('/user', UserController.create);
 router.get('/user', UserController.index);
 router.delete('/user/:id', UserController.delete);
