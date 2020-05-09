@@ -9,7 +9,7 @@ module.exports = {
 
     async create(req, res) {
 
-        var { name, address, phone, family_size, income, need, city, cpf ,description} = req.body;
+        var { name, address, phone, family_size, need, city, cpf ,description} = req.body;
         
         await User.create( 
         {   
@@ -17,7 +17,6 @@ module.exports = {
             address, 
             phone,
             family_size,
-            income,
             need,
             city,
             cpf,
