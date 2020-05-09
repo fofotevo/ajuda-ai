@@ -8,8 +8,10 @@ module.exports = {
         const { id } = req.query;
         
         const user =  await User.findOne({ where: {id: id}});
-
-        res.render('doar',{user:user})
+        firt_name = user.name.split(' ')
+        
+        res.render('doar',{user:user, firt_name : firt_name[0]})
+        
     }
 
 }
