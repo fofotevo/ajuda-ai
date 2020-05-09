@@ -21,14 +21,15 @@ module.exports = {
         return res.redirect('/');
     
     },
-    async delete(req,res) {
+
+    async delete(req, res) {
        
         const { id } = req.params;
         const donor = await Donor.findOne({ where: { id: id } });
 
         donor.destroy();
 
-        return res.end('deletou');
+        return res.end('deleted with sucess');
     },
  
 }
