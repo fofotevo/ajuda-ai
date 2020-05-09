@@ -15,7 +15,7 @@ router.get('/contato', (req, res) => {
     res.render('contato');
 });
 
-router.get('/doar/:id', FilterController.index);
+router.get('/doar/', FilterController.index);
 
 router.post('/user', UserController.create);
 router.delete('/user/:id', UserController.delete);
