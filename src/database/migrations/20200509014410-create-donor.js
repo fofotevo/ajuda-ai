@@ -5,7 +5,7 @@ const sequelize = require('sequelize');
 module.exports = {
   up: (queryInterface, Sequelize) => {
     
-      return queryInterface.createTable('users', { 
+      return queryInterface.createTable('donors', { 
         id: {
           type: Sequelize.INTEGER ,
           primaryKey:true,
@@ -43,7 +43,7 @@ module.exports = {
 
   down: (queryInterface, Sequelize) => {
 
-      return queryInterface.dropTable('users');
+      return queryInterface.dropTable('donors');
     
   }
 };
