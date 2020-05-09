@@ -5,12 +5,12 @@ module.exports = {
 
     async index(req, res) {
         
-        const { id } = req.query;
+        const { id } = req.params;
         
-        const user =  await User.findOne({ where: {id: id}});
-        firt_name = user.name.split(' ')
+        const user =  await User.findOne({ where: { id: id } });
+        var first_name = user.name.split(' ');
         
-        res.render('doar',{user:user, firt_name : firt_name[0]})
+        return res.status(200).render('doar', { user: user, first_name : first_name[0] });
         
     }
 

@@ -11,10 +11,11 @@ router.get('/', (req, res) => {
 
 router.get('/ajudar', UserController.index);
 
-
 router.get('/contato', (req, res) => {
     res.render('contato');
 });
+
+router.get('/doar/:id', FilterController.index);
 
 router.post('/user', UserController.create);
 router.delete('/user/:id', UserController.delete);
@@ -22,6 +23,5 @@ router.delete('/user/:id', UserController.delete);
 router.post('/donor', DonorController.create);
 router.get('/donor', DonorController.index);
 
-router.get('/user/filter', FilterController.index);
 
 module.exports = router;
