@@ -79,7 +79,10 @@
 	<!--================ Start Our Major Cause section =================-->
 	<section class="our_major_cause section_gap_custom">
 		<div class="container">
+			<% for(var i = 0; i < users.length; i++){ %>
+			<% if(i == 0 || i % 3 == 0){ %>
 			<div class="row">
+				<% } %>
 				<div class="col-lg-4">
 					<div class="card">
 						<div class="card-body">
@@ -87,7 +90,7 @@
 							</div>
 							<div class="card_inner_body">
 								<div class="card-body-top">
-									<span>Primeiro nome</span>
+									<span><%= users[i].name %></span>
 								</div>
 								<h4 class="card-title">O que precisa</h4>
 								<p class="card-text">inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially
@@ -99,44 +102,10 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4">
-					<div class="card">
-						<div class="card-body">
-							<div class="progress">
-							</div>
-							<div class="card_inner_body">
-								<div class="card-body-top">
-									<span>NOME</span>
-								</div>
-								<h4 class="card-title">Did not find your Package</h4>
-								<p class="card-text">inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially
-									in the workplace that’s why it’s crucial.
-								</p>
-								<a href="#" class="main_btn2">donate here</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4">
-					<div class="card">
-						<div class="card-body">
-							<div class="progress">
-							</div>
-							<div class="card_inner_body">
-								<div class="card-body-top">
-									<span>NOME</span>
-								</div>
-								<h4 class="card-title">Did not find your Package</h4>
-								<p class="card-text">inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially
-									in the workplace that’s why it’s crucial.
-								</p>
-								<a href="#" class="main_btn2">donate here</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<% if(i == 0 || i % 3 == 0){ %>
+				<div class="row">
+			<% } %>
+			<% } %>
 		</div>
 	</section>
 	<footer class="footer-area section_gap">
