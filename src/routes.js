@@ -9,9 +9,7 @@ router.get('/', (req, res) => {
     res.render('index')
 });
 
-router.get('/ajudar', (req, res) => {
-    res.render('casos');
-});
+router.get('/ajudar', UserController.index);
 
 router.post('/ajudar/:id', (req, res) => {
     res.render('doar');
@@ -22,7 +20,6 @@ router.get('/contato', (req, res) => {
 });
 
 router.post('/user', UserController.create);
-router.get('/user', UserController.index);
 router.delete('/user/:id', UserController.delete);
 
 router.post('/donor', DonorController.create);

@@ -4,14 +4,13 @@ module.exports = {
 
     async index(req, res) {
         const users = await User.findAll();
-        return res.json(users);
-        
+        return res.render('casos', {users: users});
     },
 
     async create(req, res) {
 
         var { name, address, phone, family_size, income, need, city, cpf ,description} = req.body;
-        console.log(address)
+        
         await User.create( 
         {   
             name, 
@@ -25,9 +24,10 @@ module.exports = {
             description
         });
 
-        return res.end('funcionou');
+        return res.end('criado com sucesso');
     
     },
+
     async delete(req,res) {
        
         const { id } = req.params;
@@ -35,7 +35,7 @@ module.exports = {
 
         user.destroy();
 
-        return res.end('deletou');
+        return res.status(204).redirect('/');
     },
  
 }
