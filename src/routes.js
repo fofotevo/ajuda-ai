@@ -11,9 +11,6 @@ router.get('/', (req, res) => {
 
 router.get('/ajudar', UserController.index);
 
-router.post('/ajudar/:id', (req, res) => {
-    res.render('doar');
-});
 
 router.get('/contato', (req, res) => {
     res.render('contato');
