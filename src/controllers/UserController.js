@@ -23,7 +23,9 @@ module.exports = {
             description
         });
 
-        return res.redirect('/ajudar');
+        const users = await User.findAll();
+
+        return res.render('casos', { users: users, created: 'created' });
     
     },
 
