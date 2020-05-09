@@ -91,17 +91,24 @@
 									<p><%= user.description %></p>
 									<p><%= user.need %></p>
 								</div>
-								<button class="main_btn mr-10">
+								<button class="main_btn mr-10" onclick="zap(<%= user.phone %>)">
 									ENTRAR EM CONTATO COM A PESSOA NECESSITADA!
 								</button>
 								<p>
 									<br>
 								</p>
-								<button class="main_btn mr-10" onclick="zap(<%= user.phone %>)" >
+								<button class="main_btn mr-10" onclick="zap_equipe()" >
 									ENTRAR EM CONTATO COM A EQUIPE DO "AJUDA AÍ!"
 								</button>
 								<script >
 									function zap(phone){
+										var mensagem = "algo";
+										var link = "http://api.whatsapp.com/send?1=pt_BR&phone="+phone+"&text="+mensagem;
+
+										return window.open(link, "_blank");
+
+										}
+										function zap_equipe(){
 										var mensagem = "algo";
 										var link = "http://api.whatsapp.com/send?1=pt_BR&phone="+phone+"&text="+mensagem;
 
