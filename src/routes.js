@@ -17,11 +17,14 @@ router.get('/contato', (req, res) => {
 
 router.get('/doar/', FilterController.index);
 
+router.get('/cadastro', (req, res) => {
+    res.render('cadastro')
+});
+
 router.post('/user', UserController.create);
 router.delete('/user/:id', UserController.delete);
 
 router.post('/donor', DonorController.create);
 router.get('/donor', DonorController.index);
-
 
 module.exports = router;
