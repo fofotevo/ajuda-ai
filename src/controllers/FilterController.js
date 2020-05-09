@@ -9,7 +9,9 @@ module.exports = {
         
         const user =  await User.findOne({ where: { id: id } });
         var first_name = user.name.split(' ');
-        
+        var date = user.createdAt;
+        date = date.toString();
+        console.log(date)
         return res.render('doar', { user: user, first_name : first_name[0] });
         
     }
