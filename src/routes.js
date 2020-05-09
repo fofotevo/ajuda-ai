@@ -9,5 +9,6 @@ router.get('/', (req, res) => {
 
 router.post('/user', UserController.create);
 router.get('/user', UserController.index);
+router.delete('/user', UserController.index);
 
 module.exports = router;

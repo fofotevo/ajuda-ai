@@ -26,6 +26,15 @@ module.exports = {
 
         return res.end('funcionou');
     
-    }
+    },
+    async delete(req,res) {
+       
+        const { id } = req.params;
+        const user = await User.findOne({ where: { id: id } });
+
+        user.destroy();
+
+        return res.redirect('/usuarios');
+    },
  
 }
