@@ -24,11 +24,11 @@ module.exports = {
             description
         });
 
-        return res.end('criado com sucesso');
+        return res.redirect('/ajudar');
     
     },
 
-    async delete(req,res) {
+    async delete(req, res) {
        
         const { id } = req.params;
         const user = await User.findOne({ where: { id: id } });

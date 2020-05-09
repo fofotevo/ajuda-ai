@@ -11,7 +11,6 @@ module.exports = {
     async create(req, res) {
 
         var { name, email, phone } = req.body;
-        console.log(Donor)
         await Donor.create( 
         {   
             name, 
@@ -19,7 +18,7 @@ module.exports = {
             phone
         });
 
-        return res.end('funcionou');
+        return res.redirect('/');
     
     },
     async delete(req,res) {
