@@ -52,10 +52,7 @@ module.exports = {
             allowNull: false,
           },
           
-          income:{
-            type: Sequelize.STRING,
-            allowNull: false,
-          },
+          
 
           created_at:{
             type: Sequelize.DATE,
