@@ -11,7 +11,8 @@ class User extends Model {
             family_size: DataTypes.INTEGER,
             income: DataTypes.STRING,
             need: DataTypes.STRING,
-            cpf: DataTypes.STRING, 
+            cpf: DataTypes.STRING,
+            description: DataTypes.STRING, 
             city: DataTypes.STRING
         }, 
         {

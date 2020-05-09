@@ -10,7 +10,7 @@ module.exports = {
 
     async create(req, res) {
 
-        var { name, address, phone, family_size, income, need, city, cpf } = req.body;
+        var { name, address, phone, family_size, income, need, city, cpf ,description} = req.body;
         console.log(address)
         await User.create( 
         {   
@@ -21,7 +21,8 @@ module.exports = {
             income,
             need,
             city,
-            cpf
+            cpf,
+            description
         });
 
         return res.end('funcionou');
