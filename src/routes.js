@@ -9,6 +9,6 @@ router.get('/', (req, res) => {
 
 router.post('/user', UserController.create);
 router.get('/user', UserController.index);
-router.delete('/user', UserController.index);
+router.delete('/user/:id', UserController.delete);
 
 module.exports = router;

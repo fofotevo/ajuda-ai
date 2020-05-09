@@ -34,7 +34,7 @@ module.exports = {
 
         user.destroy();
 
-        return res.redirect('/usuarios');
+        return res.end('deletou');
     },
  
 }
