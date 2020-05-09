@@ -21,7 +21,7 @@ router.get('/cadastro', (req, res) => {
     res.render('cadastro')
 });
 
-router.post('/user', UserController.create);
+router.post('/cadastrar', UserController.create);
 router.delete('/user/:id', UserController.delete);
 
 router.post('/donor', DonorController.create);
