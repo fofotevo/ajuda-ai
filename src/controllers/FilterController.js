@@ -7,9 +7,9 @@ module.exports = {
         
         const { id } = req.query;
         
-        const users =  await User.findOne({ where: {id: id}});
+        const user =  await User.findOne({ where: {id: id}});
 
-        res.render('doar')
+        res.render('doar',{user:user})
     }
 
 }
