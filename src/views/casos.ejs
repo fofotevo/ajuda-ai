@@ -79,10 +79,10 @@
 	<!--================ Start Our Major Cause section =================-->
 	<section class="our_major_cause section_gap_custom">
 		<div class="container">
-			<% for(var i = 0; i < users.length; i++){ %>
-			<% if(i == 0 || i % 3 == 0){ %>
+			<% for(var i = 0; i < Math.round(users.length / 3); i++){ %>
 			<div class="row">
-				<% } %>
+				<% for(var j = i*3; j < (i * 3) + 3; j++) {%>
+				<% if(users[j] != undefined) { %>
 				<div class="col-lg-4">
 					<div class="card">
 						<div class="card-body">
@@ -90,7 +90,7 @@
 							</div>
 							<div class="card_inner_body">
 								<div class="card-body-top">
-									<span><%= users[i].name %></span>
+									<span><%= users[j].name %></span>
 								</div>
 								<h4 class="card-title">O que precisa</h4>
 								<p class="card-text">inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially
@@ -101,10 +101,9 @@
 						</div>
 					</div>
 				</div>
-
-			<% if(i == 0 || i % 3 == 0){ %>
+				<%}%>
+				<% } %>
 			</div>
-			<% } %>
 			<% } %>
 		</div>
 	</section>
