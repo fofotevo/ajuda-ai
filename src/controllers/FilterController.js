@@ -9,7 +9,7 @@ module.exports = {
         
         const users =  await User.findOne({ where: {id: id}});
 
-        res.json(users)
+        res.render('doar')
     }
 
 }
