@@ -91,25 +91,26 @@
 									<p><%= user.description %></p>
 									<p><%= user.need %></p>
 								</div>
-								<button class="main_btn mr-10" onclick="zap(<%= user.phone %>)">
+								<button class="main_btn mr-10" onclick="zap('<%= user.phone %>',' <%= user.address %>', '<%= user.name %>' ) ">
 									ENTRAR EM CONTATO COM A PESSOA NECESSITADA!
 								</button>
 								<p>
 									<br>
 								</p>
-								<button class="main_btn mr-10" onclick="zap_equipe()" >
+								<button class="main_btn mr-10" onclick="zap_equipe(' <%= user.address %>', '<%= user.name %>')" >
 									ENTRAR EM CONTATO COM A EQUIPE DO "AJUDA AÍ!"
 								</button>
 								<script >
-									function zap(phone){
-										var mensagem = "algo";
+									function zap(phone,address,name){
+										var mensagem = "Olá, "+name+"! Venho através do Ajude aí oferecer uma doação a seu pedido. Estou disposto a fazer uma entregra para você em "+address+". Aguardo resposta :)";
 										var link = "http://api.whatsapp.com/send?1=pt_BR&phone="+phone+"&text="+mensagem;
 
 										return window.open(link, "_blank");
 
 										}
-										function zap_equipe(){
-										var mensagem = "algo";
+										function zap_equipe(address,name){
+											var mensagem = "Olá, "+name+"! Venho através do Ajude aí oferecer uma doação a seu pedido. Estou disposto a fazer uma entregra para você em "+address+". Aguardo resposta :)";
+										var phone = "519953419109"
 										var link = "http://api.whatsapp.com/send?1=pt_BR&phone="+phone+"&text="+mensagem;
 
 										return window.open(link, "_blank");
