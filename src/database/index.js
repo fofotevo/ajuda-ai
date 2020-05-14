@@ -6,7 +6,6 @@ const Donor = require('../models/Donor');
 
 const connection = new Sequelize(dbconfig);
 
-
 User.init(connection);
 Donor.init(connection);
 

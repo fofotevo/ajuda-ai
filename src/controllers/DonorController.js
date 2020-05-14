@@ -5,14 +5,12 @@ module.exports = {
     async index(req, res) {
         const donor = await Donor.findAll();
         return res.json(donor);
-        
     },
 
     async create(req, res) {
 
-        var { name, email, phone } = req.body;
-        await Donor.create( 
-        {   
+        const { name, email, phone } = req.body;
+        await Donor.create({   
             name, 
             email, 
             phone

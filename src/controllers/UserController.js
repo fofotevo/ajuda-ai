@@ -9,10 +9,9 @@ module.exports = {
 
     async create(req, res) {
 
-        var { name, address, phone, family_size, need, city, cpf ,description} = req.body;
+        const { name, address, phone, family_size, need, city, cpf ,description} = req.body;
         
-        await User.create( 
-        {   
+        await User.create({
             name, 
             address, 
             phone,

@@ -3,7 +3,6 @@ const { Model, DataTypes } = require ('sequelize');
 class Donor extends Model {
     
     static init(sequelize){
-        
         super.init({
             name: DataTypes.STRING,
             email: DataTypes.STRING,
@@ -12,7 +11,6 @@ class Donor extends Model {
         }, 
         {
             sequelize
-            
         });
     }
 }
